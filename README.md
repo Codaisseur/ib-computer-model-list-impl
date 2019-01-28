@@ -1,0 +1,1 @@
+Implementation of "Computer Model List" (React+Redux) homework
