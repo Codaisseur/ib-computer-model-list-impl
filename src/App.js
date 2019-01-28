@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
+import PropTypes from 'prop-types';
 import "./App.css"
 
 const data = {
@@ -26,6 +27,13 @@ const data = {
 }
 
 class ModelDetails extends Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    manufacturer: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+    origin: PropTypes.string.isRequired
+  }
+
   render() {
     return (
       <div>
@@ -44,7 +52,6 @@ class App extends Component {
   state = { model: "" }
 
   updateSelection = event => {
-    console.log(event.target.value)
     this.setState({
       model: event.target.value
     })
